@@ -34,8 +34,8 @@ cuenta si es una categoria, si es un objeto especifico, si este objeto no tiene 
 
 ## Encapsulamiento
 
-El encapsulamiento es el proceso de ocultar o no dejar usar, ver o setear valores o functions dentro de las clases. Esto con 
-la finalidad de evitar diferentes problemas al realizar el código.
+El encapsulamiento es el proceso de ocultar o no dejar usar, ver o setear valores o functions dentro de las clases. 
+Esto con la finalidad de evitar diferentes problemas al realizar el código y hacer una programación defensiva.
 
 El encapsulamiento en Python tiene 3 niveles:
 
@@ -107,6 +107,111 @@ usar normalmente el atributo cómo si no fuera protegido o privado:
 	# para usar el Deleter solo lo eliminamos con del
 	del obj.atributo >>> None (Borrado)
 
+## Herencia
 
+Es la técnica de reutilizar código en la que nos permite crear una jerarquia de clases, con la mayor o la padre llamada SUPER clase y 
+sus hijos llamada sub clases.
+
+Estas van a poder compartir las mismas caracteristicas con variaciones menores en cada subclase. Permitiendonos, dependiendo del 
+encapsulamiento, acceder a los metodos y atributos de la SUPER clase
+
+Para hacer herencia en Python es solo hacer uso de:
+
+class name_class (SUPER_class):
+	# class content
+
+En el constructor __init__, vamos a tener que declarar los valores que necesite la SUPER clase, ya que si no lo hacemos nos va a 
+dar error. Esto se hace usando la función super() y accediendo a el constructor:
+
+def __init__ (param):
+	super().__init__(param)
+
+con Super() podemos acceder diferectamente a las propiedades y metodos de la Super Clase, pero no es tan necesario ya que, pues somos el 
+hijo o subclase de esa misma clase, es mas que obvio que podemos acceder a esas cosas ya.
+
+Se puede hacer diferentes tipos de herencias:
+
+- Directa:
+	Super Clase tiene una o varias sub Clases
+- Multinivel:
+	Sub Clase se convierte en una Super Clase y tiene una o varias sub Clases
+- Multiple:
+	Una Sub Clase es hecha apartir de dos o más Super Clases
+
+## Polimorfismo
+
+Es una extención de la herencia, en donde las subclases pueden cambiar su comportamiento, o más especificamente, los 
+metodos. Generalmente los más módificados con los metodos Getter, Setter, ... etc. 
+
+En python solo se debe rescribir el metodo. Pero en otros lenguajes se debe declarar con 
+@override. Cómo en Java.
+
+## Intro Complejidad Algoritmica
+Que es?
+
+- comparación de la eficiencia de un algoritmo.
+	Poder aproximar y desarrollar un algoritmo que nos de un resultado de un problema.
+- complejidad temporal vs complejidad espacial
+	Poder determinar si el algoritmo tiene una complejidad de tiempo o de memoria. Generalmente es temporal.
+- Podemos definirla cómo T(n)
+	Para definir la complejidad simplemente vamos a tener que hacer nuestra function T, con un input n y el resultado 
+	es su complejidad
+
+Para medir la complejidad temporal vamos a hacer aproximaciones:
+- Cronometrar el tiempo que se demora en correr el algoritmo.
+	Esto depende del computador, de lo que este haciendo el computador, no es lo mejor pero es un aproximamiento
+- Contar los pasos del algoritmo.
+	Contar cada paso de cada operacion del algoritmo
+- Contar los pasos del algoritmo, cuando nos estemos acercando a el infinito.
+	Esto es lo más viable para la mayoria de algoritmos
+
+## Conteo Abstracto de una Operación
+
+Es la sola acción de contar los pasos de un algoritmo. Contando cada operación y así. 
+En los loops vamos a contar los pasos de este y multiplicarlos por el número de veces que 
+el loop se repite. 
+
+Cuando tenemos un loop dentro de otro loop, es lo mismo que si ocurriera una potenciación. 
+
+Cuando contemos esto, vamos a poder formar un polinomio, ya sea con varias o ninguna variables mátematicas (x, y, z).
+
+Pero esto nos va a dar las bases para pensar y contar los pasos cuando estos se acercen a lo infinito, haciendo uso de...
+
+## Big O Notation
+
+El crecimiento asintótico o Big O Notation es una notación mátematica que nos va a permitir mirar que va a ser 
+el comportamiento de cualquier algoritmo que nosotros lleguemos a hacer.
+
+Tambien para optimizar nuesto analisis del algoritmo al usar el Big O Notation:
+- No importan las variaciones pequeñas, loops con números pequeños no nos van a importar tanto.
+- Debemos enfocarnos en lo que le pasa a el problema cuando su tamaño se acerca a el infinito
+- Podemos reviar el mejor de los casos, promedio y el peor de los casos
+- Cuando realizamos el proceso de Big O Notation, siempre vamos a elegir a el resultado mayor
+
+Para hacer el proceso de Big O Notation, vamos a tomar el algoritmo, 
+mirar que loops o iteraciones tiene. Pueden ser con while, for, recursivity. 
+Generalmente estos algoritmos tienen uno o más inputs.
+
+Mirar cual va a ser el comportamiento de esté input. Este comportamiento puede que sea:
+- Constante (2): 
+	El valor es igual durante todo el algoritmo, TOP tier de algoritmo
+- Lineal (n): 
+	El valor avanza en linea recta, proporcionalmente crece el input. Buen Tier, pero puede mejorar
+- Logaritmico (log n):
+	El valor avanza en una forma logaritmica, primero mucho pero luego se estabiliza su crecimiento. TOP Tier de algoritmo
+- Log. Lineal (n log n):
+	El valor avanza en una forma logaritmica con una constante. Empieza a ser malo.
+- Polinomial (n ** 2):
+	El valor es potenciado por 2. Es malo
+- Exponencialmente (2 ** n): 
+	El valor avanza en potencias de 2. Es muy malo
+- Factorialmente (n!):
+	El valor avanza en su factorial. Literalmente infinito
 	
+Algunas de las iteraciones pueden interactuar entre sí, para eso se 
+debe hacer diferentes operaciones cómo la suma o multiplicación de estas.
+Del resultado de estas solo vamos a tomar el mayor.
+
+Simplemente wow, esto me encanta, aunque no lo he probado aún.
+
 
