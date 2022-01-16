@@ -214,4 +214,22 @@ Del resultado de estas solo vamos a tomar el mayor.
 
 Simplemente wow, esto me encanta, aunque no lo he probado aún.
 
+## Por que Graficar?
 
+El graficar es una excelente herramienta que nos va a poder ayudar en direfentes cosas, cómo:
+- Reconocimeinto de Patrones
+- Predicción de una serie
+- Simplifica la interpretación y las conclusiones acerca de los datos
+- Presentar datos de una mejor forma
+- Poder ver si nuestro programa esta funcionando bien
+- El tener los datos de una forma visual nos ayuda a entenderlos mejor
+
+Para hacer graficas en Python podemos usar la libreria de Bokeh.
+Bokeh es una libreria que nos va a permitir hacer mil y un tipos de graficas 
+con los datos que tengamos.
+
+Aunque deberiamos ver primero que tipo de grafica deberiamos usar para 
+nuestros datos.
+
+Bokeh nos permite convertir nuestras graficas cómo archivos HTML, png, u otros, pero 
+en algunos debemos hacer más pasos que en otros.

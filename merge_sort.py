@@ -4,10 +4,12 @@ from typing import Iterator
 
 def merge_sort (unorganized_list, iterarions=0):
     if len(unorganized_list) > 1:
+        # Create the sublists
         mid_point = len(unorganized_list) // 2
         left_list = unorganized_list[:mid_point]
         right_list = unorganized_list[mid_point:]
 
+        # Create a scope of sublists
         merge_sort(left_list)
         merge_sort(right_list)
 
@@ -15,6 +17,8 @@ def merge_sort (unorganized_list, iterarions=0):
         right_iterator = 0
         main_iterator = 0
 
+        # Compare the contents of the left and right list
+        # Add the minor numbers to the main_arr
         while left_iterator < len(left_list) and right_iterator < len(right_list):
             if left_list[left_iterator] < right_list[right_iterator]:
                 unorganized_list[main_iterator] = left_list[left_iterator]
@@ -26,6 +30,7 @@ def merge_sort (unorganized_list, iterarions=0):
             main_iterator += 1
             iterarions += 1
 
+        # Add the Remainings of the left and right list
         while left_iterator < len(left_list):
             unorganized_list[main_iterator] = left_list[left_iterator]
             left_iterator += 1
