@@ -32,6 +32,9 @@ en otros elementos.
 La Abstracción es la técnica de observar y modelar un objeto, ya sea físico o virtual, y crear o convertirlo en una clase. Tieniendo en 
 cuenta si es una categoria, si es un objeto especifico, si este objeto no tiene mismas caracteristicas que otros, entre otros.
 
+Enfocarnos en los detalles principales de un objeto, separar la información no nesearia y con esta aplicar diferentes protecciones
+privadas o publicas.
+
 ## Encapsulamiento
 
 El encapsulamiento es el proceso de ocultar o no dejar usar, ver o setear valores o functions dentro de las clases. 
@@ -233,3 +236,48 @@ nuestros datos.
 
 Bokeh nos permite convertir nuestras graficas cómo archivos HTML, png, u otros, pero 
 en algunos debemos hacer más pasos que en otros.
+
+
+## Optimización
+
+La Optmización es un concepto que nos permite resolver los problemas de una forma más computacional. Permitiendonos 
+resolver casí cualquier tipo de problemas. 
+
+En la optimización debemos tener en cuenta:
+	Debemos encontrar los inputs que nos den lo minimo y máximo de un output, ya sea 
+	tiempo, resultado, valor, longitud del output, entre otros. 
+	
+	Teniendo en cuenta diferentes
+	condiciones del problema en si, ejemplo la busqueda de un hotel con varias categorias, el 
+	trafico optimizado.
+
+Hay diferentes problemas que necesitan una gran optmización en sus algoritmos, algunos son llamados
+Problemas del Milenio. Esta es una lista:
+- Travelling sales man
+- P vs NP
+- Entre otros
+
+Si se pueden resolver se puede conseguir una recompensa de millones de dolares y premios de reconocimiento.
+
+## 0 - 1 Nap Sack
+
+El Problema del morral consiste en un problema de un ladron que tiene una maleta, en la que puede llevar hasta 15kg de cosas. 
+El ladron va a robar un museo donde se puede llevar lo siguiente, vamos a tomar los elementos cómo cajas que contienen algo:
+
+- caja de 12kg que vale $4
+- caja de 2kg que vale $2
+- caja de 1kg que vale $2
+- caja de 4kg que vale $10
+- caja de 1kg que vale $1
+
+Estos valores pueden cambiar dependiendo del ejercicio o de cómo se realice.
+
+Debemos conseguir el mayor número de plata en el robo.
+
+### Greddy Algorithms
+
+Los Greddy Algorithms son algoritmos que funcionan para problemas en los que se puede necesita llevar 
+o conseguir unos elementos divisibles, obteniendo lo mayor de estos. Ejemplo con el problema de arriba:
+
+Podemos llevarnos polvo de oro, polvo de plata y arroz. El Greddy algorithm tomaria todo lo posible 
+de oro, plata y lo que le sobre de arroz. Asi para asegurar la mayor ganancia de esos elementos.
